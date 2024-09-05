@@ -1,20 +1,29 @@
-# Programming Assignment 2: Data Normalization and Filtering
+# Programming Assignment 2: Numerical Python (NumPy)
+This repository contains solutions to two basic data preprocessing problems using NumPy: Normalization and Finding Elements Divisible by 3. These problems are designed to practice basic data manipulation and saving results to files in Python.
+
 ## Overview
-This repository contains Python scripts for two data processing tasks:
-
 ### 1. Normalization Problem: 
-This script creates a 5x5 NumPy array of random numbers, normalizes it, and saves the result to a file.
-### 2. Divisible by 3 Problem: 
-This script creates a 10x10 NumPy array of squares of the first 100 positive integers, filters out elements divisible by 3, and saves these elements to a file.
+**Objective:** Normalize a 5x5 NumPy array of random numbers.
+Normalization is a key preprocessing step in data analytics that involves centering and scaling the data. Centering means subtracting the mean, and scaling means dividing by the standard deviation.
 
-## Scripts
-### 1. Normalization
-#### Objective: Generate a 5x5 array of random numbers, normalize it, and save the result.
-#### Process:
+**Process:**
 1. Create a 5x5 array with random numbers.
 2. Normalize the array using the formula: 𝑍 = 𝑋 − mean/std
 3. Save the normalized array to X_normalized.npy.
 
+### 2. Divisible by 3 Problem: 
+**Objective:** Find elements divisivle by 3 from a 10x10 NumPy array of squares of the first 100 positive integers.
+
+**Process:** 
+1. Generate a 10x10 matrix where each elements is the square of an integer from 1 to 100.
+2. Extract all elements that are visible by 3.
+3. Save the array of elements divisible by 3 as div_by_3.npy.
+
+# How to Run
+### 1. Normalization Problem:
+* Run the code that generates a 5x5 random array and normalizes it.
+* The normalized data will be saved as X_normalized.npy.
+  
 Code:
 ```python
 import numpy as np
@@ -40,11 +49,8 @@ np.save('X_normalized.npy', X_normalized)
 ```
 
 ### 2. Divisible by 3
-#### Objective: Create a 10x10 array of squares from 1 to 100, filter elements divisible by 3, and save the result.
-#### Process:
-1. Generate a 10x10 array with squares of the first 100 integers.
-2. Filter elements that are divisible by 3.
-3. Save these elements to div_by_3.npy.
+* Run the code that generates a 10x10 array of squares of integers and finds elements divisible by 3.
+* The filtered array will be saved as div_by_3.npy.
 
 Code:
 
@@ -61,6 +67,6 @@ squares_div_by_3 = x[x % 3 == 0]
 np.save('div_by_3.npy', squares_div_by_3)
 ```
 ### Metadata
-#### Name: Cueco, Czarina Julia C.
-#### Section: 2ECE-B
-#### Date Submitted: September 2, 2024
+* **Name:** Cueco, Czarina Julia C.
+* **Section:** 2ECE-B
+* **Date Submitted:** September 2, 2024 (Edited: 09/05/24)
